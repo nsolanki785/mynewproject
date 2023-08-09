@@ -7,7 +7,7 @@ import moment from "moment";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
-const DateScrollPicker = () => {
+const TimeScrollPicker = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [dates, setDates] = useState(getInitialDates(startDate));
 
@@ -25,7 +25,7 @@ const DateScrollPicker = () => {
   }
 
   function handleNextClick() {
-    const newStartDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000); 
+    const newStartDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
     setStartDate(newStartDate);
     setDates(getInitialDates(newStartDate));
   }
@@ -49,4 +49,4 @@ console.log('dates',dates);
   );
 };
 
-export default DateScrollPicker;
+export default TimeScrollPicker;

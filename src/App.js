@@ -5,6 +5,7 @@ import './App.css';
 import CustomizedSteppers from './component/stepper';
 import '././style.css'
 import DateScrollPicker from './component/DatePicker';
+
 function App() {
   const [activeTab, setActiveTab] = useState(0)
 
@@ -18,14 +19,28 @@ function App() {
           <div className='m-3'>
             <div className='row '>
               <div className='col-md-6 '>
+              <h3>Select date of service</h3>
+                <div style={{
+                  color: "lightgray",
+                  fontSize: "14px"
+                }}>
+                  Service Will take approx 30 mins.
+                </div>
                 <DateScrollPicker />
               </div>
               <div className='col-md-6'>
+              <h3>Time to start the service </h3>
+                <div style={{
+                  color: "lightgray",
+                  fontSize: "14px"
+                }}>
+                  Select the best hour for you
+                </div>
                 <DateScrollPicker />
               </div>
             </div>
             <div className='d-flex justify-content-center'>
-              <button className='back-btn mr-2'>Cancel</button>
+              <button className='back-btn btn-m'>Cancel</button>
               <button onClick={() => setActiveTab(activeTab + 1)} className='next-btn btn btn-primary'>Continue</button>
             </div>
           </div>
